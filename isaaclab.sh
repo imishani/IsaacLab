@@ -34,6 +34,7 @@ extract_python_exe() {
         # Use TeamCity build
         build_path=${ISAACLAB_PATH}/_isaac_sim
     fi
+    echo "[INFO] Using python from: ${build_path}"
     # check if using conda
     if ! [[ -z "${CONDA_PREFIX}" ]]; then
         # use conda python
@@ -68,6 +69,7 @@ extract_isaacsim_exe() {
         # Use TeamCity build
         build_path=${ISAACLAB_PATH}/_isaac_sim
     fi
+    echo "[INFO] Using python from: ${build_path}"
     # python executable to use
     local isaacsim_exe=${build_path}/isaac-sim.sh
     # check if there is a python path available

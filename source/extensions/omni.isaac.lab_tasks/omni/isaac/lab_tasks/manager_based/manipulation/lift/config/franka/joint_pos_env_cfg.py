@@ -21,6 +21,7 @@ from omni.isaac.lab.markers.config import FRAME_MARKER_CFG  # isort: skip
 from omni.isaac.lab_assets.franka import FRANKA_PANDA_CFG  # isort: skip
 
 
+
 @configclass
 class FrankaCubeLiftEnvCfg(LiftEnvCfg):
     def __post_init__(self):

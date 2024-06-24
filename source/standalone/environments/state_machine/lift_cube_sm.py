@@ -27,7 +27,7 @@ parser.add_argument("--cpu", action="store_true", default=False, help="Use CPU p
 parser.add_argument(
     "--disable_fabric", action="store_true", default=False, help="Disable fabric and use USD I/O operations."
 )
-parser.add_argument("--num_envs", type=int, default=None, help="Number of environments to simulate.")
+parser.add_argument("--num_envs", type=int, default=1, help="Number of environments to simulate.")
 # append AppLauncher cli args
 AppLauncher.add_app_launcher_args(parser)
 # parse the arguments
@@ -96,6 +96,7 @@ def infer_state_machine(
 ):
     # retrieve thread id
     tid = wp.tid()
+    print(tid)
     # retrieve state machine state
     state = sm_state[tid]
     # decide next state
